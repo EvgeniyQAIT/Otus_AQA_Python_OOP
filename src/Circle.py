@@ -1,6 +1,7 @@
 import math
+from src.Figure import Figure
 
-class Circle:
+class Circle(Figure):
 
     def __init__(self, side_r):
         if side_r <= 0:

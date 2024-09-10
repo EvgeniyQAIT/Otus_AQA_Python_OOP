@@ -1,5 +1,5 @@
 from src.Figure import Figure
-from src.Square import Square
+
 class Rectangle(Figure):
 
     def __init__(self, side_a, side_b):

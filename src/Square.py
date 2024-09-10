@@ -1,4 +1,6 @@
-class Square:
+from src.Figure import Figure
+
+class Square(Figure):
 
     def __init__(self, side_a):
         if side_a <=0:

@@ -1,4 +1,6 @@
-class Trangle:
+from src.Figure import Figure
+
+class Trangle(Figure):
 
     def __init__(self, side_a, side_b, side_h):
         if side_a <=0 or side_b <=0 or side_h <=0:
