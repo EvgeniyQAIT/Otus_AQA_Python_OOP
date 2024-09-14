@@ -13,13 +13,10 @@ class Rectangle(Figure):
         return self.side_a * self.side_b
 
     @property
-    def get_repimetr(self):
+    def get_perimetr(self):
         return (self.side_a + self.side_b) * 2
 
 
-r = Rectangle(3, 5)
-s = Square(5)
-r.add_area(s)
 
 
 

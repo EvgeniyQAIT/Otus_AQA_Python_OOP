@@ -4,4 +4,4 @@ class Figure:
         if not isinstance(figure, Figure):
             return self.get_area + figure.get_area
         else:
-            raise ValueError("Передана объект некорректного класса.")
+            raise ValueError("Передан объект некорректного класса.")
