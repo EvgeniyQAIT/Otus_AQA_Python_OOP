@@ -31,9 +31,10 @@ def test_triangle_perimetr_positive(side_a, side_b, height, perimetr):
 @pytest.mark.parametrize(
     "side_a, side_b, height, area",
     [
-        (-3.5, -2.2, -5.5, -9.625)
+        (-3.5, -2.2, -5.5, -9.625),
+        ('abs', 'abs', 'abs', 100),
     ],
-    ids=['negative_int']
+    ids=['negative_int', 'negative_str']
 )
 def test_triangle_area_negative(side_a, side_b, height, area):
     with pytest.raises(ValueError):
@@ -43,9 +44,10 @@ def test_triangle_area_negative(side_a, side_b, height, area):
 @pytest.mark.parametrize(
     "side_a, side_b, height, perimetr",
     [
-        (-3.5, -2.2, -5.5, -11.2)
+        (-3.5, -2.2, -5.5, -11.2),
+        ('abs', 'abs', 'abs', 100)
     ],
-    ids=['negative_int']
+    ids=['negative_int', 'negative_str']
 )
 def test_triangle_perimetr_negative(side_a, side_b, height, perimetr):
     with pytest.raises(ValueError):

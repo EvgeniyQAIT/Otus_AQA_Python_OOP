@@ -34,8 +34,9 @@ def test_rectangle_perimetr_positive(side_a, side_b, perimetr):
     "side_a, side_b, area",
     [
         (-3.5, -5.5, -19.25),
+        ('abs', 'abs', 111)
     ],
-    ids=['negative_int']
+    ids=['negative_int', 'negative_str']
 )
 def test_rectangle_area_negative(side_a, side_b, area):
     with pytest.raises(ValueError):
@@ -45,9 +46,10 @@ def test_rectangle_area_negative(side_a, side_b, area):
 @pytest.mark.parametrize(
     "side_a, side_b, perimetr",
     [
-        (-3.5, -5.5, -18)
+        (-3.5, -5.5, -18),
+        ('abs', 'abs', 110)
     ],
-    ids=['negative_int']
+    ids=['negative_int', 'negative_str']
 )
 def test_rectangle_perimetr_negative(side_a, side_b, perimetr):
     with pytest.raises(ValueError):

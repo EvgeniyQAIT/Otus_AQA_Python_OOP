@@ -3,6 +3,8 @@ from src.Figure import Figure
 class Triangle(Figure):
 
     def __init__(self, side_a, side_b, height):
+        if not isinstance(side_a or side_b or height, (int, float)):
+            raise ValueError("Стороны триугольника должны быть числами")
         if side_a <=0 or side_b <=0 or height <=0:
             raise ValueError("Стороны триугольника не могут быть меньше 0")
         self.side_a = side_a

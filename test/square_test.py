@@ -30,9 +30,10 @@ def test_square_perimetr_positive(side_a, perimetr):
 @pytest.mark.parametrize(
     "side_a, area",
     [
-        (-5.5, -30.25)
+        (-5.5, -30.25),
+        ('abs', 10),
     ],
-    ids=['negative_int']
+    ids=['negative_int', 'negative_str']
 )
 def test_square_area_negative(side_a, area):
     with pytest.raises(ValueError):
@@ -42,9 +43,10 @@ def test_square_area_negative(side_a, area):
 @pytest.mark.parametrize(
     "side_a, perimetr",
     [
-        (-5.05, -20.2)
+        (-5.05, -20.2),
+        ('abs', 222),
     ],
-    ids=['negative_int']
+    ids=['negative_int', 'negative_str']
 )
 def test_square_perimetr_negative(side_a, perimetr):
     with pytest.raises(ValueError):

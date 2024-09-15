@@ -32,8 +32,9 @@ def test_circle_perimetr_positive(radius, perimetr):
     "radius, area",
     [
         (-3.5, -19.25),
+        ('abs', 10),
     ],
-    ids=['negative_int']
+    ids=['negative_int', 'negative_str']
 )
 def test_rectangle_area_negative(radius, area):
     with pytest.raises(ValueError):
@@ -43,9 +44,10 @@ def test_rectangle_area_negative(radius, area):
 @pytest.mark.parametrize(
     "radius, perimetr",
     [
-        (-3.5, 0)
+        (-3.5, 0),
+        ('abs', 10)
     ],
-    ids=['negative_int']
+    ids=['negative_int', 'negative_str']
 )
 def test_circle_perimetr_negative(radius, perimetr):
     with pytest.raises(ValueError):
