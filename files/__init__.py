@@ -8,4 +8,4 @@ def get_path(filename: str):
 
 
 CSV_FILE_PATH = get_path(filename="books.csv")
-JSON_FILE_PATH = get_path(filename="user.json")
+JSON_FILE_PATH = get_path(filename="users.json")
