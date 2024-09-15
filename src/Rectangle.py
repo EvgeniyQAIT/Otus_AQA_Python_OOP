@@ -3,6 +3,8 @@ from src.Figure import Figure
 class Rectangle(Figure):
 
     def __init__(self, side_a, side_b):
+        if not isinstance(side_a and side_b, (float, int)):
+            raise ValueError("Стороны прямоугольника должны являться числом")
         if side_a <=0 or side_b <=0:
             raise ValueError("Стороны прямоугольника не могут быть меньше 0")
         self.side_a = side_a
@@ -13,13 +15,10 @@ class Rectangle(Figure):
         return self.side_a * self.side_b
 
     @property
-    def get_repimetr(self):
+    def get_perimetr(self):
         return (self.side_a + self.side_b) * 2
 
 
-r = Rectangle(3, 5)
-s = Square(5)
-r.add_area(s)
 
 
 

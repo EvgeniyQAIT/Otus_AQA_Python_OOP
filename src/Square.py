@@ -3,6 +3,8 @@ from src.Figure import Figure
 class Square(Figure):
 
     def __init__(self, side_a):
+        if not isinstance(side_a, (int, float)):
+            raise ValueError("Стороны квадрата должны быть числами")
         if side_a <=0:
             raise ValueError("Стороны квадрата не могут быть меньше 0")
         self.side_a = side_a
