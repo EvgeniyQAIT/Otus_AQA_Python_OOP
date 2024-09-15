@@ -1,7 +1,7 @@
 class Figure:
 
     def add_area(self, figure):
-        if not isinstance(figure, Figure):
-            return self.get_area + figure.get_area
+        if isinstance(figure, Figure):
+            return round(self.get_area + figure.get_area, 2)
         else:
             raise ValueError("Передан объект некорректного класса.")
