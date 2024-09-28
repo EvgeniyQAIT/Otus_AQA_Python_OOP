@@ -1,53 +1,54 @@
-from src.Square import Square
+from homework_1_Figure.Circle import Circle
 import pytest
 
 
 @pytest.mark.parametrize(
-    "side_a, area",
+    "radius, area",
     [
-        (5, 25),
-        (5.5, 30.25)
+        (3, 28.27),
+        (3.5, 38.48)
     ],
     ids=['int', 'float']
 )
-def test_square_area_positive(side_a, area):
-    r = Square(side_a)
+def test_circle_area_positive(radius, area):
+    r = Circle(radius)
     assert r.get_area == area, f'Площадь должна быть {area}'
 
+
 @pytest.mark.parametrize(
-    "side_a, perimetr",
+    "radius, perimetr",
     [
-        (5, 20),
-        (5.05, 20.2)
+        (3, 18.85),
+        (3.15, 19.79)
     ],
     ids=['int', 'float']
     )
-def test_square_perimetr_positive(side_a, perimetr):
-    r = Square(side_a)
+def test_circle_perimetr_positive(radius, perimetr):
+    r = Circle(radius)
     assert r.get_perimetr == perimetr, f'Периметр должен быть {perimetr}'
 
 
 @pytest.mark.parametrize(
-    "side_a, area",
+    "radius, area",
     [
-        (-5.5, -30.25),
+        (-3.5, -19.25),
         ('abs', 10),
     ],
     ids=['negative_int', 'negative_str']
 )
-def test_square_area_negative(side_a, area):
+def test_rectangle_area_negative(radius, area):
     with pytest.raises(ValueError):
-        Square(side_a)
+        Circle(radius)
 
 
 @pytest.mark.parametrize(
-    "side_a, perimetr",
+    "radius, perimetr",
     [
-        (-5.05, -20.2),
-        ('abs', 222),
+        (-3.5, 0),
+        ('abs', 10)
     ],
     ids=['negative_int', 'negative_str']
 )
-def test_square_perimetr_negative(side_a, perimetr):
+def test_circle_perimetr_negative(radius, perimetr):
     with pytest.raises(ValueError):
-        Square(side_a)
+        Circle(radius)

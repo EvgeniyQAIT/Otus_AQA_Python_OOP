@@ -1,7 +1,7 @@
-from src.Triangle import Triangle
-from src.Rectangle import Rectangle
-from src.Square import Square
-from src.Circle import Circle
+from homework_1_Figure.Triangle import Triangle
+from homework_1_Figure.Rectangle import Rectangle
+from homework_1_Figure.Square import Square
+from homework_1_Figure.Circle import Circle
 import pytest
 
 
