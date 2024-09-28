@@ -1,7 +1,7 @@
 import json
 from csv import DictReader
-from files import JSON_FILE_PATH
-from files import CSV_FILE_PATH
+from homework_3_files import JSON_FILE_PATH
+from homework_3_files import CSV_FILE_PATH
 
 
 def result():

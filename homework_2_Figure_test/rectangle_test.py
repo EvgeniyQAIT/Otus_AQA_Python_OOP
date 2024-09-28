@@ -1,4 +1,4 @@
-from src.Rectangle import Rectangle
+from homework_1_Figure.Rectangle import Rectangle
 import pytest
 
 
@@ -54,4 +54,3 @@ def test_rectangle_area_negative(side_a, side_b, area):
 def test_rectangle_perimetr_negative(side_a, side_b, perimetr):
     with pytest.raises(ValueError):
         Rectangle(side_a, side_b)
-

@@ -1,4 +1,5 @@
-from src.Triangle import Triangle
+
+from homework_1_Figure.Triangle import Triangle
 import pytest
 
 

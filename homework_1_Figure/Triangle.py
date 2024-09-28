@@ -1,4 +1,4 @@
-from src.Figure import Figure
+from homework_1_Figure.Figure import Figure
 
 class Triangle(Figure):
 
