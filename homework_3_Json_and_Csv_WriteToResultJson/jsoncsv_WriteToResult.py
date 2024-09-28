@@ -47,5 +47,7 @@ def result():
     with open("result.json", "w") as result_final:
         result_final.write(json.dumps(user_mas, indent=4))
 
+#Добавил строчку ради того, что бы переделать пул-реквест
+
 
 
