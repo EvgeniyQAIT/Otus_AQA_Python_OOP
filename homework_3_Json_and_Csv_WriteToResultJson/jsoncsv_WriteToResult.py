@@ -11,8 +11,8 @@ def result():
         for i in range(len(users)):
             user = {
                 "name": users[i]["name"],
-                "gender": users[i]["gander"],
-                "adress": users[i]["adress"],
+                "gender": users[i]["gender"],
+                "address": users[i]["address"],
                 "age": users[i]["age"],
                 "books": [],
             }
@@ -38,7 +38,7 @@ def result():
         i, j = 0, 0
         while i < len(books):
             if j < len(user_mas):
-                user_mas[j]["book"].append(books[i])
+                user_mas[j]["books"].append(books[i])
                 j += 1
             else:
                 j = 0
@@ -47,7 +47,9 @@ def result():
     with open("result.json", "w") as result_final:
         result_final.write(json.dumps(user_mas, indent=4))
 
-#Добавил строчку ради того, что бы переделать пул-реквест
+result()
+
+
 
 
 
